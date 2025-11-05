@@ -2,10 +2,10 @@
   {
     "name": "folder1",
     "title": "Onyx Pack",
-    "image": "assets/folder1/onyx.png",
+    "file": "assets/folder1/onyx.png",
     "files": [
       {
-        "image": "assets/folder1/onyx.png",
+        "file": "assets/folder1/onyx.png",
         "url": "https://download.dashmap.live/bfcbe019-bc7f-4ee2-a405-a6c0ca7ee7b1/onyx.png",
         "title": "Onyx"
       }
@@ -14,10 +14,10 @@
   {
     "name": "folder2",
     "title": "B2 Signs",
-    "image": "assets/folder2/b2.png",
+    "file": "assets/folder2/b2.png",
     "files": [
       {
-        "image": "assets/folder2/b2.png",
+        "file": "assets/folder2/b2.png",
         "url": "https://download.dashmap.live/bfcbe019-bc7f-4ee2-a405-a6c0ca7ee7b1/b2.png",
         "title": "B2"
       }
@@ -26,15 +26,15 @@
   {
     "name": "bleb2",
     "title": "Bleb",
-    "image": "assets/bleb2/blub1x1.webm",
+    "file": "assets/bleb2/blub1x1.webm",
     "files": [
       {
-        "image": "assets/bleb2/baseg1x1.jpg",
+        "file": "assets/bleb2/baseg1x1.jpg",
         "url": "https://download.dashmap.live/bfcbe019-bc7f-4ee2-a405-a6c0ca7ee7b1/onyx.png",
         "title": "baseg"
       },
       {
-        "image": "assets/bleb2/meow1x1.webm",
+        "file": "assets/bleb2/meow1x1.webm",
         "url": "https://download.dashmap.live/bfcbe019-bc7f-4ee2-a405-a6c0ca7ee7b1/onyx.png",
         "title": "meow"
       }
