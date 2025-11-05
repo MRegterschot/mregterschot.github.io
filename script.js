@@ -1,5 +1,5 @@
-const username = "yourusername";
-const repo = "yourrepo";
+const username = "MRegterschoot";
+const repo = "mregterschot.github.io";
 const branch = "main"; // or 'master' if that's your branch name
 const dataFile = "data.json";
 
