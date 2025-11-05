@@ -13,27 +13,18 @@
 
     h1 {
       text-align: center;
-      margin-bottom: 20px;
-    }
-
-    #folderSelect {
-      display: block;
-      margin: 0 auto 30px;
-      padding: 8px 12px;
-      font-size: 1rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
+      margin-bottom: 30px;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
     }
 
     .item {
       background: white;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       overflow: hidden;
       text-align: center;
@@ -47,14 +38,22 @@
 
     .item img {
       width: 100%;
-      height: auto;
+      height: 160px;
+      object-fit: cover;
       display: block;
     }
 
     .item-title {
-      padding: 8px;
-      font-size: 0.9rem;
-      word-break: break-all;
+      padding: 10px;
+      font-weight: 600;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 20px;
+      cursor: pointer;
+      color: #2563eb;
+      text-decoration: underline;
     }
 
     .copied {
@@ -66,10 +65,7 @@
 <body>
   <h1>Signpack Browser</h1>
 
-  <select id="folderSelect">
-    <option value="">Select a signpack...</option>
-  </select>
-
+  <div id="backBtn" class="back" style="display:none;">← Back to folders</div>
   <div class="gallery" id="gallery"></div>
 
   <script src="script.js"></script>
