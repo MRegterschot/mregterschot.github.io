@@ -1,6 +1,6 @@
 const username = "MRegterschot";
-const repo = "yourrepo";
-const path = "assets/signpacks";
+const repo = "mregterschot.github.io";
+const path = "assets";
 
 const gallery = document.getElementById("gallery");
 
