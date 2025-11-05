@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Signpack Gallery</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: system-ui, sans-serif;
+      background: #f8fafc;
       padding: 20px;
-      background: #f9fafb;
     }
     h1 {
       text-align: center;
@@ -18,29 +19,30 @@
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 20px;
     }
-    .pack {
+    .item {
       background: white;
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 10px;
+      overflow: hidden;
       text-align: center;
-      transition: transform 0.2s;
+      transition: transform 0.2s ease;
     }
-    .pack:hover {
+    .item:hover {
       transform: scale(1.05);
     }
-    .pack img {
+    .item img {
       width: 100%;
-      border-radius: 8px;
+      height: auto;
+      display: block;
     }
-    .pack-name {
-      margin-top: 8px;
-      font-weight: bold;
+    .item-title {
+      padding: 10px;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
-  <h1>Signpack Gallery</h1>
+  <h1>Image Gallery</h1>
   <div class="gallery" id="gallery"></div>
 
   <script src="script.js"></script>
