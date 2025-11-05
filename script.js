@@ -23,17 +23,46 @@ async function loadData() {
   loadFolders();
 }
 
+function createMediaElement(src, alt) {
+  const ext = src.split(".").pop().toLowerCase();
+  if (["webm", "mp4"].includes(ext)) {
+    const video = document.createElement("video");
+    video.src = src;
+    video.autoplay = true;
+    video.loop = true;
+    video.muted = true;
+    video.playsInline = true;
+    video.title = alt;
+    video.style.width = "100%";
+    video.style.height = "160px";
+    video.style.objectFit = "cover";
+    return video;
+  } else {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = alt;
+    return img;
+  }
+}
+
 function loadFolders() {
   backBtn.style.display = "none";
   gallery.innerHTML = "";
 
   folders.forEach(folder => {
+    const preview = folder.files?.[0]?.file || "https://via.placeholder.com/300x160?text=No+Preview";
+
     const card = document.createElement("div");
     card.className = "item";
-    card.innerHTML = `
-      <img src="${folder.image}" alt="${folder.title}">
-      <div class="item-title">${folder.title}</div>
-    `;
+
+    const media = createMediaElement(preview, folder.title);
+    const title = document.createElement("div");
+    title.className = "item-title";
+    title.textContent = folder.title;
+
+    card.appendChild(media);
+    card.appendChild(title);
+
     card.onclick = () => loadFiles(folder);
     gallery.appendChild(card);
   });
@@ -51,10 +80,15 @@ function loadFiles(folder) {
   folder.files.forEach(file => {
     const card = document.createElement("div");
     card.className = "item";
-    card.innerHTML = `
-      <img src="${file.image}" alt="${file.title}">
-      <div class="item-title">${file.title}</div>
-    `;
+
+    const media = createMediaElement(file.file, file.title);
+    const title = document.createElement("div");
+    title.className = "item-title";
+    title.textContent = file.title;
+
+    card.appendChild(media);
+    card.appendChild(title);
+
     card.onclick = () => copyToClipboard(file.url, card);
     gallery.appendChild(card);
   });
